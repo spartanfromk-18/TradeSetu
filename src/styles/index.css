@@ -78,6 +78,7 @@ select, input:not([type='checkbox']):not([type='range']) { width: 100%; border: 
 .result-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 1.25rem; }
 .result-strip div { display: grid; gap: .35rem; }
 .result-strip strong { font-size: 1.25rem; }
+.trust-footer { display: grid; gap: .5rem; color: #607069; font-size: .85rem; line-height: 1.5; }
 .table-scroll { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; min-width: 780px; }
 caption { padding: .75rem 0; text-align: left; color: #607069; font-size: .85rem; }

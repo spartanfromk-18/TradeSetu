@@ -4,6 +4,9 @@ dist/
 .env
 .env.local
 .env.*.local
+.dev.vars
+edge/.dev.vars
+edge/.dev.vars.*
 *.log
 coverage/
 *.tsbuildinfo

@@ -20,7 +20,7 @@ TradeSetu is a Pan-India, zero-backend brokerage and statutory charge calculator
 
 ## Quick Start
 
-Requirements: Node.js 18+ and npm 9+.
+Requirements: Node.js 20+ and npm 9+.
 
 ```bash
 npm install
@@ -35,10 +35,21 @@ Open `http://localhost:5173`.
 |---|---|
 | `npm run dev` | Start the Vite development server. |
 | `npm run build` | Type-check and create the production bundle. |
+| `npm run build:vercel` | Type-check the frontend and create the Vercel production bundle. |
 | `npm run preview` | Preview the production bundle. |
 | `npm run typecheck` | Run strict TypeScript checks for the frontend. |
 | `npm test` | Run frontend and edge Vitest suites. |
+| `npm run release:check` | Run all non-deploying release-candidate validation gates. |
+| `npm run audit:prod` | Audit production dependencies at high severity or above. |
 | `npm run edge:dev` | Run the optional edge worker locally without deployment. |
+
+## Release readiness
+
+Run `npm run release:check` before preparing a release candidate. It runs typechecking, tests,
+both hosting build paths, and `git diff --check`; it does not deploy. Run `npm run audit:prod`
+separately to verify production dependencies have no high-severity vulnerabilities. Preview
+deployment, browser/device, and performance checks remain manual; use
+[the release checklist](docs/pre-launch-checklist.md) to record evidence.
 
 ## Architecture
 

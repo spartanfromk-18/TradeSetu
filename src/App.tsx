@@ -9,7 +9,7 @@ import { formatInr } from './lib/money';
 import { normalizeTradeInput } from './lib/normalize';
 import { putCachedQuote } from './lib/quoteCache';
 import { compareBrokersInWorker } from './lib/workerClient';
-import type { ComputeResult, Segment } from './types/trade';
+import type { ComputeResult, Segment, TradeInput } from './types/trade';
 
 const segments: readonly { value: Segment; label: string }[] = [
   { value: 'equity_delivery', label: 'Equity delivery' },
@@ -54,7 +54,7 @@ function App(): JSX.Element {
     async function calculate(): Promise<void> {
       setIsCalculating(true);
       try {
-        const normalized = normalizeTradeInput(rawInput);
+        const normalized: TradeInput = normalizeTradeInput(rawInput);
         const nextResults: readonly ComputeResult[] = await compareBrokersInWorker(rawInput);
         if (calculationSequence.current !== sequence) {
           return;
@@ -65,7 +65,7 @@ function App(): JSX.Element {
           ?? nextResults[0];
         if (selected !== undefined) {
           const fingerprint: string = await createQuoteFingerprint(
-            normalized as unknown as Record<string, unknown>,
+            normalized,
           );
           await putCachedQuote(fingerprint, 'v2026.10.19', selected);
         }
@@ -166,6 +166,17 @@ function App(): JSX.Element {
         {results.length > 0 && (
           <BrokerLeaderboard results={results} selectedBrokerId={brokerId} onSelect={selectBroker} />
         )}
+
+        <footer className="trust-footer">
+          <p>
+            Quote data is stored only locally in your browser using IndexedDB. TradeSetu does not send
+            your calculator inputs to a backend.
+          </p>
+          <p>
+            Estimates are for information only, not financial advice. Verify final charges with your
+            broker&apos;s official contract note.
+          </p>
+        </footer>
       </div>
     </main>
   );

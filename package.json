@@ -13,6 +13,8 @@
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "test": "vitest run --passWithNoTests",
+    "release:check": "npm run typecheck && npm test && npm run build:vercel && npm run build && git diff --check",
+    "audit:prod": "npm audit --omit=dev --audit-level=high",
     "edge:dev": "wrangler dev --config edge/wrangler.toml",
     "edge:deploy": "wrangler deploy --config edge/wrangler.toml"
   },
