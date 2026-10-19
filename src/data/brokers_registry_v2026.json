@@ -1,0 +1,211 @@
+{
+  "schemaVersion": "1.0.0",
+  "registryVersion": "v2026.10.19",
+  "currency": "INR",
+  "statutory": {
+    "gstBps": 1800,
+    "stt": {
+      "equity_delivery": {
+        "buyBps": 100,
+        "sellBps": 100
+      },
+      "equity_intraday": {
+        "buyBps": 0,
+        "sellBps": 25
+      },
+      "futures": {
+        "buyBps": 0,
+        "sellBps": 20
+      },
+      "options": {
+        "buyBps": 0,
+        "sellBps": 100,
+        "basis": "PREMIUM"
+      }
+    },
+    "exchangeTransactionCharges": {
+      "NSE": {
+        "equity_delivery": 3.25,
+        "equity_intraday": 3.25,
+        "futures": 1.73,
+        "options": 35.03
+      },
+      "BSE": {
+        "equity_delivery": 3.75,
+        "equity_intraday": 3.75,
+        "futures": 0,
+        "options": 0
+      }
+    },
+    "sebiTurnoverFeeBps": 0.1,
+    "stampDuty": {
+      "equity_delivery": {
+        "buyBps": 15,
+        "sellBps": 0
+      },
+      "equity_intraday": {
+        "buyBps": 3,
+        "sellBps": 0
+      },
+      "futures": {
+        "buyBps": 2,
+        "sellBps": 0
+      },
+      "options": {
+        "buyBps": 3,
+        "sellBps": 0,
+        "basis": "PREMIUM"
+      }
+    },
+    "dpCharges": {
+      "CDSL": {
+        "fixedPaise": 1500
+      },
+      "NSDL": {
+        "fixedPaise": 1500
+      }
+    }
+  },
+  "brokers": [
+    {
+      "id": "zerodha",
+      "name": "Zerodha",
+      "dp": "CDSL",
+      "accountOpeningFeePaise": 0,
+      "amcAnnualPaise": 30000,
+      "equityDelivery": {
+        "model": "FLAT",
+        "buyPaise": 0,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "equityIntraday": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "futures": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "options": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      }
+    },
+    {
+      "id": "groww",
+      "name": "Groww",
+      "dp": "CDSL",
+      "accountOpeningFeePaise": 0,
+      "amcAnnualPaise": 0,
+      "equityDelivery": {
+        "model": "FLAT",
+        "buyPaise": 0,
+        "sellPaise": 0,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "equityIntraday": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "futures": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "options": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      }
+    },
+    {
+      "id": "upstox",
+      "name": "Upstox",
+      "dp": "CDSL",
+      "accountOpeningFeePaise": 0,
+      "amcAnnualPaise": 0,
+      "equityDelivery": {
+        "model": "FLAT",
+        "buyPaise": 0,
+        "sellPaise": 0,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "equityIntraday": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "futures": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "options": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      }
+    },
+    {
+      "id": "angel-one",
+      "name": "Angel One",
+      "dp": "CDSL",
+      "accountOpeningFeePaise": 0,
+      "amcAnnualPaise": 24000,
+      "equityDelivery": {
+        "model": "FLAT",
+        "buyPaise": 0,
+        "sellPaise": 0,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "equityIntraday": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "futures": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      },
+      "options": {
+        "model": "FLAT",
+        "buyPaise": 2000,
+        "sellPaise": 2000,
+        "minPaise": 0,
+        "maxPaise": 2000
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+name = "tradesetu-quote-proxy"
+main = "src/worker.ts"
+compatibility_date = "2026-10-19"
+
+[vars]
+ALLOWED_ORIGIN = "https://tradesetu.pages.dev"
+
+[[kv_namespaces]]
+binding = "REGISTRY_KV"
+id = "REPLACE_WITH_PRODUCTION_KV_ID"
+
+[limits]
+cpu_ms = 20
