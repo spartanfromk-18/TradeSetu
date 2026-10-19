@@ -49,7 +49,7 @@ describe('quote fingerprint and cache', () => {
       const request: IDBOpenDBRequest = indexedDB.open('tradesetu', 1);
       request.onsuccess = (): void => {
         request.result.close();
-        const deleteRequest: IDBRequest<undefined> = indexedDB.deleteDatabase('tradesetu');
+        const deleteRequest: IDBOpenDBRequest = indexedDB.deleteDatabase('tradesetu');
         deleteRequest.onsuccess = (): void => resolve();
         deleteRequest.onerror = (): void => reject(deleteRequest.error);
       };

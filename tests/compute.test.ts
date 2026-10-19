@@ -78,7 +78,9 @@ describe('deterministic compute kernel', () => {
     const results = computeAllBrokers(deliveryInput);
     expect(results).toHaveLength(brokerRegistry.brokers.length);
     expect(results.map((result) => result.totalChargesPaise)).toEqual(
-      [...results].sort((left, right) => left - right).map((result) => result.totalChargesPaise),
+      [...results]
+        .sort((left, right) => left.totalChargesPaise - right.totalChargesPaise)
+        .map((result) => result.totalChargesPaise),
     );
   });
 

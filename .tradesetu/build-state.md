@@ -33,13 +33,13 @@
 - Optional edge runtime: Cloudflare Workers
 
 ## Last Completed Action
-Created and validated the stateless Cloudflare edge proxy with KV registry fallback, Cache API caching, ETags, strict CORS, JSON validation, and security headers. The full suite has 67 passing tests, root typecheck passed, edge source typecheck passed, and `npm run build` passed.
+Added Vercel frontend deployment configuration and verified frontend-only Vercel output. Root typecheck, the full 67-test suite, `npm run build`, and `npm run build:vercel` all passed.
 
 ## Next Action
-Complete Phase 10 release tests, documentation, and production verification.
+Deploy `dist/` through the selected hosting provider when deployment credentials and project settings are ready.
 
 ## Known Issues
-No known Phase 9 issues. The edge worker remains optional; the frontend production build does not depend on its availability.
+No known Vercel deployment issues. The edge worker remains optional and is excluded from the Vercel frontend build.
 
 ## Release Readiness
 - Typecheck: PASS
@@ -48,8 +48,24 @@ No known Phase 9 issues. The edge worker remains optional; the frontend producti
 - Edge typecheck: PASS
 - Edge tests: PASS
 - Deployment target: Cloudflare Pages
+- Vercel: READY
+- Primary output: dist/
+- Edge worker: Optional and excluded from Vercel frontend build
 - Optional edge runtime: Cloudflare Workers
 - Backend required for core calculator: No
+
+## Deployment Targets
+- Cloudflare Pages: READY
+- Vercel: READY
+- Primary output: dist/
+- Edge worker: Optional and excluded from Vercel frontend build
+
+## Vercel Verification
+- [x] Vercel frontend deployment configuration
+- [x] Vercel-specific build script
+- [x] Edge isolation from Vercel build
+- [x] Environment variable safety
+- [x] Vercel build verification
 
 ## Files Changed In This Session
 - .tradesetu/build-state.md
@@ -86,3 +102,5 @@ No known Phase 9 issues. The edge worker remains optional; the frontend producti
 - LICENSE
 - .env.example
 - docs/ARCHITECTURE.md
+- vercel.json
+- .nvmrc

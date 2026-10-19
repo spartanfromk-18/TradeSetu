@@ -3,13 +3,18 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:vercel": "tsc -p tsconfig.app.json --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
     "test": "vitest run --passWithNoTests",
-    "edge:dev": "wrangler dev --config edge/wrangler.toml --local"
+    "edge:dev": "wrangler dev --config edge/wrangler.toml",
+    "edge:deploy": "wrangler deploy --config edge/wrangler.toml"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
